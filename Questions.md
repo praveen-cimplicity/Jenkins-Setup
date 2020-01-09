@@ -1,3 +1,6 @@
+When do u go for composition (and when do u go for aggregation or association)?
+>>car is composed of tyres,doors, steering where the whole may control the direct responsibility of its constituent parts lifecycle. For eg what use is door or steering independent of the car.
+
 Different ways to communicate b/w modules of your NG applicaiton using core NG functionality
 Mainly 3 ways:-
 >>using services, events
