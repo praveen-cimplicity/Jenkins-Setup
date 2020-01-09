@@ -12,6 +12,18 @@ Mainly 3 ways:-
 what is the speciality of threadLocal variable?
 >>The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread.
 
+how many ways to iterate a collection such as list
+>> using normal for loop
+
+>> using iterator
+
+>>Enchanced For loop: for (String aName : listNames) {
+    System.out.println(aName);
+}
+
+>>forEach Method with Lambda Expressions
+listNames.forEach(name -> System.out.println(name));
+
 How do u test your Angular app? 
 >>By using Protractor and any other f/w such as Mocha, Chai & Karma etc..
 
