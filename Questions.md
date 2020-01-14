@@ -30,6 +30,15 @@ How do u test your Angular app?
 How do u come up with Lines of Code for a file say app.ts?
 >>using lcov code coverage tool
 
+when doing a Join such that first table should include all rows whereas second table can have Null
+>>Left join on condition AND "filter_criteria"
+
+    SELECT c.Customer, c.State, e.Entry
+    FROM Customer c
+    LEFT JOIN Entry e
+        ON c.Customer=e.Customer
+        AND e.Category='D'
+
 How do u check connection leak to your OraDB?
 >>
                     "SELECT COUNT(*) " /
