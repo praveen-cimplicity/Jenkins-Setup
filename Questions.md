@@ -2,6 +2,9 @@ how do you read envvars from your host OS in a springboot applicaiton (similar t
 >>
 api.key=${API_KEY:not set}
 
+During a Get operation on say a Hashmap - what happens behind the scenes?
+>>When u store an object, the hashcode meth gets called to Calculate a bucket location. If there is already an object there it wud then add one more entry by creating a linked list. So when trying to get the object back the Map.entry is evaluated by using the equals() method to see if the key object is contained or not. If it does its easy on performance you get the object else there is collision.
+
 How do u create a thread-safe Singleton in Java?
 >>
 public enum Singleton{
