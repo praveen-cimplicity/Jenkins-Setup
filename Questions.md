@@ -1,3 +1,7 @@
+how do you read envvars from your host OS in a springboot applicaiton (similar to is it possible to assign values to properties from the environment in your application.properties/yml file)?
+>>
+api.key=${API_KEY:not set}
+
 How do u create a thread-safe Singleton in Java?
 >>
 public enum Singleton{
