@@ -1,11 +1,11 @@
 
-WAP for Balancing of parenthesis 
-# Python3 code to Check for
-# balanced parentheses in an expression
+#WAP for Balancing of parenthesis 
+## Python3 code to Check for
+## balanced parentheses in an expression
 open_list = ["[", "{", "("]
 close_list = ["]", "}", ")"]
 
-# Function to check parentheses
+## Function to check parentheses
 def check_balanced(myStr):
     stack = []
     for i in myStr:
