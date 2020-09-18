@@ -247,7 +247,17 @@ Example2:
 Final output: 0
 
 ===============
-Jenkins API
+[AUTH TOKEN]
+3 test cases for api testing token authenticate which run in parallel from different remote machines. 
+Tc1 - (which runs for 2 min provided valid token exists)
+Tc2 - (which runs for 3 min provided valid token exists)
+Tc3 - (which runs for 4 min provided valid token exists)
+ 
+Due to token expiry duration being changed to 2 min in the environment, it terminates the rest of the test cases. How to overcome this?
+
+Store the token in jenkins env var or in a file and run a timer to fetch valid token before expiry so the valid token is always present until last TC is executed.
+
+[Jenkins API]
 
 import json
 import requests
