@@ -41,6 +41,7 @@ def find_sum(givenStr):
 
 # Driver code
 # input alphanumeric string 
+# 1+121 = 122
 inputString = "1abc121"
 print(find_sum(inputString))
 
