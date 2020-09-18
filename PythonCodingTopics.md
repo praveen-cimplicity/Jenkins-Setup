@@ -255,7 +255,7 @@ Tc3 - (which runs for 4 min provided valid token exists)
  
 Due to token expiry duration being changed to 2 min in the environment, it terminates the rest of the test cases. How to overcome this?
 
-Store the token in jenkins env var or in a file and run a timer to fetch valid token before expiry so the valid token is always present until last TC is executed.
+Possible workaround: Store the token in jenkins env var or in a file and run a timer to fetch valid token before expiry so the valid token is always present until last TC is executed.
 
 [Jenkins API]
 
