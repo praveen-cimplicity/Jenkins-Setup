@@ -171,7 +171,7 @@ API Testing
  
 3 important constructs
  
-try: & except ValueError:
+try: & except ValueError: & raise
 try Continue and finally to bypass say divideByZero exception
  
 Problem Solving:
