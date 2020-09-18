@@ -1,7 +1,23 @@
+MAIN:
+Find the sum of numbers in alphanumeric string input
+
+str = '0 abc 1 yz 2'
+sum = 0
+numbers = []
+
+for s in str.split():
+    try:
+        numbers.append(int(s))
+    except ValueError:
+        pass
+    
+print (numbers)
+
 
 #WAP for Balancing of parenthesis 
 ## Python3 code to Check for
 ## balanced parentheses in an expression
+
 open_list = ["[", "{", "("]
 close_list = ["]", "}", ")"]
 
