@@ -246,4 +246,137 @@ Example2:
 
 Final output: 0
 
+===============
+Jenkins API
+
+import json
+import requests
+import time
+
+
+
+job_name = "testjob"   #Give your job name here
+
+
+def jenkins_job_status(job_name):
+        
+        try:
+                url  = "https://your_jenkins_endpoint/job/%s/lastBuild/api/json" %job_name   #Replace 'your_jenkins_endpoint' with your Jenkins URL
+                while True:
+                        data = requests.get(url).json()
+                        if data['building']:
+                                time.sleep(60)
+                        else:
+                                if data['result'] == "SUCCESS":
+
+                                        print "Job is success"
+                                        return True
+                                else:
+                                        print "Job status failed"
+                                        return False
+
+                
+        except Exception as e:
+                print str(e)
+                return False
+
+
+
+
+if __name__ == "__main__":
+
+        if jenkins_job_status(job_name):
+
+                print "Put your autmation here for 'job is success' condition"
+
+        else:
+                print "Put your autmation here for 'job is failed' condition"                
+	
+
+
+
+Demonstrate HTTP GET example:
+
+import requests
+import json
+import jsonpath
+
+url = 'https://reqres.in/api/users?page=1' #string variable'
+
+#send get requests
+
+response = requests.get(url)  # Request to the server, will get some response from server and store it into response
+
+print(response)  # Print the response whatever response will get from the server
+
+print(response.content)  # it will give content of the response
+
+
+json_response = json.loads(response.text)  #parse response to json format,whatever response getting just loading into the Json format
+
+print(json_response)
+
+for each in json_response['data']:
+            print(each['email'])
+            assert (each['email']) == (each['first_name']).lower()+"."+(each['last_name']).lower()+"@reqres.in"
+            #assert (each['email']) == (each['first_name']).lower()+"."+(each['last_name']).lower()+"@reqrest.in"
+
+
+
+#fetch any specific value using Jsonpath
+
+Page=jsonpath.jsonpath(json_response,'total_pages') # it will store in list formate
+#assert Page[0] == 1
+assert Page[0] == 2
+
+
+
+
+
+
+ 
+Demonstrate HTTP PUT Example:
+import requests
+import json
+import jsonpath
+
+# Below is a sample json
+# Nested structure
+
+#{"fields":{"summary":"[Dummy | Radar to Jira Tool Test Issue]Request to install couple of plugins needed for Xray Demo in RNO Jenkins","issuetype":{"name":"Task"},"customfield_10303":{"name":"Task"},"customfield_11402":1598940878048,"project":{"key":"TESDEV"},"description":"Hi Arun,\n\nCould you please help us with a Radar request for installing below plugins in PROD Jenkins instance?\n\n1. XRAY Connector plugin - <https://updates.jenkins-ci.org/download/plugins/xray-connector> \n2. Jira Trigger Plugin: <https://updates.jenkins.io/download/plugins/jira-trigger>\n\nThanks!\nnull\n","customfield_11401":1587031546000}}
+
+
+
+url = 'https://reqres.in/api/users'
+
+file = open("CreatePostRequest.json",'r')
+json_input = file.read()  #reading the file content (content in string format ) and storeing into variable
+
+request_json = json.loads(json_input)  #import json module
+                                        # .loads()  convert string format to json format
+#print(request_json)  # request_json contain json body
+
+#post request with json input body
+response = requests.post(url,request_json)
+print("my content is", response.content)
+assert response.status_code == 201  #validate response code
+
+print('my header response ',response.headers.get('Content-Type')) #get header from response
+
+#Parse response  (response : text format to json format)
+
+response_json = json.loads(response.text)
+id = jsonpath.jsonpath(response_json,'id')  #id will store in list
+print(id[0])  #first occurance for evry time it will give random value
+response = requests.get(url)
+print(response.content)
+
+
+CreatePostRequest.json
+
+{
+    "name": "Shanthi",
+    "job": "QA"
+}
+
 
