@@ -127,7 +127,6 @@ Answer
 
 #MongoDB   #NoSQL   #SQL  
 Q7: How to make a chain of function decorators? How to make a chain of function decorators?
-96 Python Interview Questions  Python  96  Senior
 Details
 How can I make two decorators in Python that would do the following?
 
