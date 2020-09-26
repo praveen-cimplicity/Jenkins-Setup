@@ -19,6 +19,10 @@ For such comparison-based Python interview questions, try to keep your explanati
 as possible. Your potential employers will probably appreciate that you are able to explain tough
 topics in a simple-to-understand manner.
 
+How do u MERGE two dictionaries? Is there any inbuilt method - could you show  the syntax? merged list{'a':1, 'b':3 , 'c':4}
+x = {'a':1, 'b':2} y = {'b':3 , 'c':4}
+z = {**x, **y}
+
 ######
 LOG PARSER
 ######
