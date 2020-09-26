@@ -11,6 +11,14 @@ def simple_nonrep_char(str):
 print(simple_nonrep_char("TimesQuiz"))
 print(simple_nonrep_char("TimesforTimes"))
 
+##Demonstrate Pickling and unpickling
+Pickling happens when a module within Python is accepted and converted into a string
+module, and then later dumped into the file.
+As opposed to that, unpickling is when you retrieve the string module from the file.
+For such comparison-based Python interview questions, try to keep your explanations as simple
+as possible. Your potential employers will probably appreciate that you are able to explain tough
+topics in a simple-to-understand manner.
+
 ######
 LOG PARSER
 ######
