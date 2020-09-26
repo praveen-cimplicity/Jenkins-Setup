@@ -11,6 +11,123 @@ def simple_nonrep_char(str):
 print(simple_nonrep_char("TimesQuiz"))
 print(simple_nonrep_char("TimesforTimes"))
 
+######
+LOG PARSER
+######
+def get_next_event(filename):
+    with open(filename, "r") as datafile:
+        for line in datafile:
+            if "dut: Device State: " in line:
+                line = line.strip()
+                # Parse out the action and timestamp
+                action = line.split()[-1]
+                timestamp = line[:19]
+                yield (action, timestamp)
+
+
+Q1: What are virtualenvs? What are virtualenvs?
+96 Python Interview Questions  Python  96  Mid
+Answer
+A virtualenv is what Python developers call an isolated environment for development, running, debugging Python code. It is used to isolate a Python interpreter together with a set of libraries and settings. Together with pip, it allows us to develop, deploy and run multiple applications on a single host, each with their own version of the Python interpreter, and separate set of libraries.
+
+Interview Coming Up?  Check 96 Python Interview Questions
+linkadevait.com
+Q2: What is the python “with” statement designed for? What is the python “with” statement designed for?
+96 Python Interview Questions  Python  96  Mid
+Answer
+The with statement simplifies exception handling by encapsulating common preparation and cleanup tasks in so-called context managers.
+
+For instance, the open statement is a context manager in itself, which lets you open a file, keep it open as long as the execution is in the context of the with statement where you used it, and close it as soon as you leave the context, no matter whether you have left it because of an exception or during regular control flow.
+
+As a result you could do something like:
+
+with open("foo.txt") as foo_file:
+    data = foo_file.read()
+OR
+
+from contextlib import nested
+with nested(A(), B(), C()) as(X, Y, Z):
+    do_something()
+OR (Python 3.1)
+
+with open('data') as input_file, open('result', 'w') as output_file:
+    for line in input_file:
+        output_file.write(parse(line))
+OR
+
+lock = threading.Lock()
+with lock: #Critical section of code
+Interview Coming Up?  Check 96 Python Interview Questions
+linkstackoverflow.com
+Q3: What is the function of “self”? What is the function of “self”?
+96 Python Interview Questions  Python  96  Mid
+Answer
+Self is a variable that represents the instance of the object to itself. In most of the object oriented programming language, this is passed to the methods as a hidden parameters that is defined by an object. But, in python, it is declared and passed explicitly. It is the first argument that gets created in the instance of the class A and the parameters to the methods are passed automatically. It refers to separate instance of the variable for individual objects.
+
+Let's say you have a class ClassA which contains a method methodA defined as:
+
+def methodA(self, arg1, arg2): #do something
+and ObjectA is an instance of this class.
+
+Now when ObjectA.methodA(arg1, arg2) is called, python internally converts it for you as:
+
+ClassA.methodA(ObjectA, arg1, arg2)
+The self variable refers to the object itself.
+
+
+Q4: What does the Python nonlocal statement do (in Python 3.0 and later)? What does the Python nonlocal statement do (in Python 3.0 and later)?
+Answer
+In short, it lets you assign values to a variable in an outer (but non-global) scope.
+
+The nonlocal statement causes the listed identifiers to refer to previously bound variables in the nearest enclosing scope excluding globals.
+
+For example the counter generator can be rewritten to use this so that it looks more like the idioms of languages with closures.
+
+def make_counter():
+    count = 0
+    def counter():
+        nonlocal count
+        count += 1
+        return count
+    return counter
+    
+
+Q5: What are the wheels and eggs? What is the difference? What are the wheels and eggs? What is the difference?
+Wheel and Egg are both packaging formats that aim to support the use case of needing an install artifact that doesn’t require building or compilation, which can be costly in testing and production workflows.
+
+The Egg format was introduced by setuptools in 2004, whereas the Wheel format was introduced by PEP 427 in 2012.
+
+Wheel is currently considered the standard for built and binary packaging for Python.
+
+Here’s a breakdown of the important differences between Wheel and Egg.
+
+Wheel has an official PEP. Egg did not.
+Wheel is a distribution format, i.e a packaging format. 1 Egg was both a distribution format and a runtime installation format (if left zipped), and was designed to be importable.
+Wheel archives do not include .pyc files. Therefore, when the distribution only contains Python files (i.e. no compiled extensions), and is compatible with Python 2 and 3, it’s possible for a wheel to be “universal”, similar to an sdist.
+Wheel uses PEP376-compliant .dist-info directories. Egg used .egg-info.
+Wheel has a richer file naming convention. A single wheel archive can indicate its compatibility with a number of Python language versions and implementations, ABIs, and system architectures.
+Wheel is versioned. Every wheel file contains the version of the wheel specification and the implementation that packaged it.
+Wheel is internally organized by sysconfig path type, therefore making it easier to convert to other formats.
+
+Q6: What are metaclasses in Python? What are metaclasses in Python?
+Answer
+>>
+
+#MongoDB   #NoSQL   #SQL  
+Q7: How to make a chain of function decorators? How to make a chain of function decorators?
+96 Python Interview Questions  Python  96  Senior
+Details
+How can I make two decorators in Python that would do the following?
+
+@makebold
+@makeitalic
+def say():
+   return "Hello"
+which should return:
+
+"<b><i>Hello</i></b>"
+Answer
+
 
 
 MAIN: Extract & print only numbers from alphanumeric string input
