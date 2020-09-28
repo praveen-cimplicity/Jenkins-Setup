@@ -38,12 +38,9 @@ def get_next_event(filename):
 
 
 Q1: What are virtualenvs? What are virtualenvs?
-96 Python Interview Questions  Python  96  Mid
 Answer
 A virtualenv is what Python developers call an isolated environment for development, running, debugging Python code. It is used to isolate a Python interpreter together with a set of libraries and settings. Together with pip, it allows us to develop, deploy and run multiple applications on a single host, each with their own version of the Python interpreter, and separate set of libraries.
 
-Interview Coming Up?  Check 96 Python Interview Questions
-linkadevait.com
 Q2: What is the python “with” statement designed for? What is the python “with” statement designed for?
 96 Python Interview Questions  Python  96  Mid
 Answer
@@ -69,10 +66,9 @@ OR
 
 lock = threading.Lock()
 with lock: #Critical section of code
-Interview Coming Up?  Check 96 Python Interview Questions
-linkstackoverflow.com
+
+
 Q3: What is the function of “self”? What is the function of “self”?
-96 Python Interview Questions  Python  96  Mid
 Answer
 Self is a variable that represents the instance of the object to itself. In most of the object oriented programming language, this is passed to the methods as a hidden parameters that is defined by an object. But, in python, it is declared and passed explicitly. It is the first argument that gets created in the instance of the class A and the parameters to the methods are passed automatically. It refers to separate instance of the variable for individual objects.
 
@@ -124,11 +120,8 @@ Wheel is internally organized by sysconfig path type, therefore making it easier
 Q6: What are metaclasses in Python? What are metaclasses in Python?
 Answer
 >>
-
-#MongoDB   #NoSQL   #SQL  
+ 
 Q7: How to make a chain of function decorators? How to make a chain of function decorators?
-96 Python Interview Questions  Python  96  Senior
-Details
 How can I make two decorators in Python that would do the following?
 
 @makebold
@@ -226,7 +219,7 @@ fac = int (num)
 print("Factorial of", fac,"is", 
 factorial(fac)) 
 
-HOw to find whether given num is Prime or NOT:
+How to find whether given num is Prime or NOT:
 num = 11
   
 #If given number is greater than 1 
