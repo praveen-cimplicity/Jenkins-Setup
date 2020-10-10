@@ -36,24 +36,33 @@ def get_next_event(filename):
                 timestamp = line[:19]
                 yield (action, timestamp)
 
+def get_string_mismatch_count(input_string):
+   """ Problem 3: Getting character count mismatch
+       between input string and reversed string.
+       If there is no mismatch print None
+   """
+   reverse_string = input_string[::-1]
+   mismatch_count = 0
+ 
+   if input_string != reverse_string:
+       for i in range(0, len(input_string)//2):
+           mismatch_count += 2
+       return mismatch_count
+ 
+ 
+[print(get_string_mismatch_count(test_string)) for test_string in
+['abcabc', 'abab','MadamImAdam','madam im adam', 'ab1ba', 'ab#ba','eeeee','madamimadam']]
 
+		
 Q1: What are virtualenvs? What are virtualenvs?
 Answer:  A virtualenv is what Python developers call an isolated environment for development, running, debugging Python code. It is used to isolate a Python interpreter together with a set of libraries and settings. Together with pip, it allows us to develop, deploy and run multiple applications on a single host, each with their own version of the Python interpreter, and separate set of libraries.
 
 Interview Coming Up?  Check 96 Python Interview Questions
 linkadevait.com
-Q2: What is the python “with” statement designed for? What is the python “with” statement designed for?
-96 Python Interview Questions  Python  96  Mid
-Answer
+Q2: What is the python “with” statement designed for? 
 The with statement simplifies exception handling by encapsulating common preparation and cleanup tasks in so-called context managers.
-
 For instance, the open statement is a context manager in itself, which lets you open a file, keep it open as long as the execution is in the context of the with statement where you used it, and close it as soon as you leave the context, no matter whether you have left it because of an exception or during regular control flow.
-
 As a result you could do something like:
-
-with open("foo.txt") as foo_file:
-    data = foo_file.read()
-OR
 
 from contextlib import nested
 with nested(A(), B(), C()) as(X, Y, Z):
