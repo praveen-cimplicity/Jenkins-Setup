@@ -25,4 +25,4 @@ Edit the jenkins.xml file (installed into %PROGRAMFILES{x86)%/Jenkins/jenkins.xm
 Private key and JKS keystore passwords
 When creating the JKS keystore, the destination keystore password (e.g. JKS) must match the source keystore password (e.g. the password for the .pfx).
   
-https://github.com/praveen-cimplicity/Jenkins-Setup/blob/master/Thread_Lifecycle.jpg
+![Thread Lifecycle](https://github.com/praveen-cimplicity/Jenkins-Setup/blob/master/Thread_Lifecycle.jpg)
