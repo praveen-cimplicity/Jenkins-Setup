@@ -24,3 +24,5 @@ Edit the jenkins.xml file (installed into %PROGRAMFILES{x86)%/Jenkins/jenkins.xm
 --httpsKeyStorePassword="<cleartext-password-to-keystore>"
 Private key and JKS keystore passwords
 When creating the JKS keystore, the destination keystore password (e.g. JKS) must match the source keystore password (e.g. the password for the .pfx).
+  
+img<>
