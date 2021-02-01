@@ -70,5 +70,28 @@ How do u check connection leak to your OraDB?
                     "FROM pg_stat_activity " /
                     "WHERE state ILIKE '%idle%'"
                     
-                    
+ 
+Why String needs to be immutable in Java?
+What is a lambda expression? 
+File handling using try with resources specifically stream closure
+
+ 	You have an object array . Assume that each object has got properties like name and emailId. Sort the list of objects using comparators 
+ 	Remove all objects from the array which has an invalid email not in the format xyz@gmail.com using the .fiIter() function on streams 
+ 	Retrieve a list of unique names from the array — using .map() function
+ 	Transform the list of user object list to another type of objects both objects have the same properties but different attributes
+ 	Find unique objects in a list if objects say every object has username and date_of_birth.  How to ensure that the list does not contain any duplicates?
+
+What is a functional interface? Can you explain with an example why it is used
+Can you explain how you can pass list of objects to a method as method argument?
+
+Thread Lifecycle, 
+Diff b/w wait and sleep (or when is InterruptedException thrown)? .
+ 
+In java can a dead thread be reinstated or brought back into new / running state?
+
+How to consume a REST endpoint  i.e.  invoke/call from java or Spring-boot app (reactive way) - https://stackoverflow.com/questions/3913502/restful-call-in-java
+Multiple RESTful calls parallelly: https://stackoverflow.com/questions/50345971/how-to-call-multiple-rest-api-parallel-in-java 
+(Scenario based question : Need to pull 1000’s of msgs using a single Facebook rest endpoint and insert into DB. Note that order of the actuals msgs is not important at the time of insertion. 
+How to invoke a REST api base on Executor service & perform bulk insert into DB using Batch queries
+
                     
