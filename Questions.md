@@ -84,7 +84,8 @@ File handling using try with resources specifically stream closure
 What is a functional interface? Can you explain with an example why it is used
 Can you explain how you can pass list of objects to a method as method argument?
 
-Thread Lifecycle, 
+Thread Lifecycle
+![Thread Lifecycle](https://github.com/praveen-cimplicity/Jenkins-Setup/blob/master/Thread_Lifecycle.jpg)
 Diff b/w wait and sleep (or when is InterruptedException thrown)? .
  
 In java can a dead thread be reinstated or brought back into new / running state?
