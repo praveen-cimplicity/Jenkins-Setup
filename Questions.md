@@ -1,3 +1,46 @@
+>>
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution {
+  public static String[] candidates = {
+    // Valid
+    "racecar", 
+    "Kayak",
+    "never odd or even",
+    "rats live on no evil star",
+    "A Toyota! Race fast... safe car: a Toyota",
+    "Some men interpret nine memos",
+    // Invalid
+    "wombat",
+    "No lemons, one melon", // lemons, one->lemon, no
+    "Too bad – I hid a book", // book->boot
+    "No trace; not one cartoon", // cartoon->carton
+    "Ma'am, I'm Adam", // Ma'am->Madam
+    "Del was a sled", // was->saw
+    "Flee to Em, remote elf", // Em->me
+    "Ma? Ha! A sham!" // Ha! A sham->Has a ham
+  };
+  
+  public static Boolean isPalindrome(String candidate) {
+    // Make this work
+    return false;
+  }
+  
+  public static void main(String[] args) {
+    for (String candidate : candidates) {
+      System.out.println(candidate + ": " + isPalindrome(candidate));
+    }
+  }
+}
+
 how do you read envvars from your host OS in a springboot applicaiton (similar to is it possible to assign values to properties from the environment in your application.properties/yml file)?
 >>
 api.key=${API_KEY:not set}
